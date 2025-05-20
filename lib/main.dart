@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:snackzilla/SplashPage.dart';
 
 void main() {
   runApp(const MyApp());
@@ -7,37 +8,34 @@ void main() {
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Snackzilla',
       debugShowCheckedModeBanner: false,
-      home: Page()
+      home: SplashPage(),
     );
   }
 }
 
-class Page extends StatefulWidget {
-  const Page({super.key});
+// ✅ Renamed Page -> HomePage
+class HomePage extends StatefulWidget {
+  const HomePage({super.key});
 
   @override
-  State<Page> createState() => _PageState();
+  State<HomePage> createState() => _HomePageState();
 }
 
-class _PageState extends State<Page> {
+class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        
+        title: Text("Welcome to Snackzilla"),
       ),
-        body:
-        Container()
+      body: Center(
+        child: Text("This is the Home Page"),
+      ),
     );
   }
 }
-
-
-
-

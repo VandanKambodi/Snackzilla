@@ -58,8 +58,8 @@ flutter:
   uses-material-design: true
 
   # To add assets to your application, add an assets section, like this:
-  # assets:
-  #   - images/a_dot_burr.jpeg
+  assets:
+    - assets/Images/
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
@@ -76,17 +76,17 @@ flutter:
   fonts:
     - family: pageHead
       fonts:
-        - asset: Fonts/Poppins-SemiBold.ttf
+        - asset: assets/Fonts/Poppins-SemiBold.ttf
   #       - asset: fonts/Schyler-Italic.ttf
   #         style: italic
     - family: title
       fonts:
-        - asset: fonts/Poppins-ExtraBold.ttf
+        - asset: assets/Fonts/Poppins-ExtraBold.ttf
   #       - asset: fonts/TrajanPro_Bold.ttf
-  #         weight: 700
+#          weight: 100
     - family: description
       fonts:
-        - asset: fonts/Poppins-Regular.ttf
+        - asset: assets/Fonts/Poppins-Regular.ttf
 
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/to/font-from-package
