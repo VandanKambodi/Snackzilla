@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:snackzilla/signUp.dart';
+import 'package:flutter/cupertino.dart';
+import 'package:snackzilla/LoginPage.dart';
 
-class ForgotPass extends StatefulWidget{
+class signUp extends StatefulWidget{
   @override
-  State<ForgotPass> createState() => _forgotPassState();
+  State<signUp> createState() => _signUpState();
 }
 
-class _forgotPassState extends State<ForgotPass> {
+class _signUpState extends State<signUp> {
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
@@ -62,6 +62,32 @@ class _forgotPassState extends State<ForgotPass> {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           const SizedBox(height: 8),
+                          Text("Full Name",
+                              style: TextStyle(
+                                  fontFamily: 'pageHead', fontSize: 16)),
+                          const SizedBox(height: 10),
+                          TextField(
+                            keyboardType: TextInputType.emailAddress,
+                            cursorColor: Colors.redAccent,
+                            decoration: InputDecoration(
+                              prefixIcon: Icon(Icons.person, color: Colors.grey),
+                              label: Text('Enter Your Name',
+                                  style: TextStyle(
+                                      color: Colors.grey,
+                                      fontFamily: 'description')),
+                              border: OutlineInputBorder(
+                                  borderRadius: BorderRadius.circular(20)),
+                              focusedBorder: OutlineInputBorder(
+                                borderRadius: BorderRadius.circular(20),
+                                borderSide: BorderSide(color: Colors.redAccent),
+                              ),
+                              enabledBorder: OutlineInputBorder(
+                                borderRadius: BorderRadius.circular(20),
+                                borderSide: BorderSide(color: Colors.grey),
+                              ),
+                            ),
+                          ),
+                          const SizedBox(height: 16),
                           Text("Email Address",
                               style: TextStyle(
                                   fontFamily: 'pageHead', fontSize: 16)),
@@ -113,32 +139,6 @@ class _forgotPassState extends State<ForgotPass> {
                               ),
                             ),
                           ),
-                          const SizedBox(height: 16),
-                          Text("Confirm Password",
-                              style: TextStyle(
-                                  fontFamily: 'pageHead', fontSize: 16)),
-                          const SizedBox(height: 10),
-                          TextField(
-                            cursorColor: Colors.redAccent,
-                            obscureText: true,
-                            decoration: InputDecoration(
-                              prefixIcon: Icon(Icons.lock, color: Colors.grey),
-                              label: Text('Enter Confirm Password',
-                                  style: TextStyle(
-                                      color: Colors.grey,
-                                      fontFamily: 'description')),
-                              border: OutlineInputBorder(
-                                  borderRadius: BorderRadius.circular(20)),
-                              focusedBorder: OutlineInputBorder(
-                                borderRadius: BorderRadius.circular(20),
-                                borderSide: BorderSide(color: Colors.redAccent),
-                              ),
-                              enabledBorder: OutlineInputBorder(
-                                borderRadius: BorderRadius.circular(20),
-                                borderSide: BorderSide(color: Colors.grey),
-                              ),
-                            ),
-                          ),
                           const SizedBox(height: 10),
                           Row(
                             children: [
@@ -167,7 +167,7 @@ class _forgotPassState extends State<ForgotPass> {
                           Center(
                             child: ElevatedButton(
                               onPressed: () {},
-                              child: Text("Sign in",
+                              child: Text("Sign up",
                                   style: TextStyle(
                                       color: Colors.white,
                                       fontFamily: 'pageHead',
@@ -206,14 +206,14 @@ class _forgotPassState extends State<ForgotPass> {
                           Row(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
-                              Text("Don't Have An Account? ",
+                              Text("Already Have An Account? ",
                                   style: TextStyle(
                                       fontFamily: 'description', fontSize: 12)),
                               GestureDetector(
                                 onTap: () {
-                                  Navigator.push(context, MaterialPageRoute(builder: (context) => signUp()));
+                                  Navigator.push(context, MaterialPageRoute(builder: (context) => LoginPage()));
                                 },
-                                child: Text("Sign Up",
+                                child: Text("Sign In",
                                     style: TextStyle(
                                         color: Colors.red.shade400,
                                         fontFamily: 'description',

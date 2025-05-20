@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:snackzilla/forgotPass.dart';
+import 'package:snackzilla/signUp.dart';
 
 
 class LoginPage extends StatefulWidget {
@@ -191,7 +192,9 @@ class _LoginPageState extends State<LoginPage> {
                                   style: TextStyle(
                                       fontFamily: 'description', fontSize: 12)),
                               GestureDetector(
-                                onTap: () {},
+                                onTap: () {
+                                  Navigator.push(context, MaterialPageRoute(builder: (context) => signUp()));
+                                },
                                 child: Text("Sign Up",
                                     style: TextStyle(
                                         color: Colors.red.shade400,
