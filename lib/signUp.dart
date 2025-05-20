@@ -67,7 +67,7 @@ class _signUpState extends State<signUp> {
                                   fontFamily: 'pageHead', fontSize: 16)),
                           const SizedBox(height: 10),
                           TextField(
-                            keyboardType: TextInputType.emailAddress,
+                            keyboardType: TextInputType.name,
                             cursorColor: Colors.redAccent,
                             decoration: InputDecoration(
                               prefixIcon: Icon(Icons.person, color: Colors.grey),

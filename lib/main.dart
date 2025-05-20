@@ -1,8 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:snackzilla/SplashPage.dart';
+import 'package:flutter/services.dart';
 
-void main() {
-  runApp(const MyApp());
+
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+
+  // Lock orientation to portrait only
+  await SystemChrome.setPreferredOrientations([
+    DeviceOrientation.portraitUp,
+  ]);
+
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
