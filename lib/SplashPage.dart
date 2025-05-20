@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:snackzilla/LoginPage.dart';
 import 'main.dart';
 
 class SplashPage extends StatefulWidget {
@@ -32,7 +33,7 @@ class SplashPageState extends State<SplashPage> with TickerProviderStateMixin {
     Future.delayed(Duration(seconds: 4), () {
       Navigator.pushReplacement(
         context,
-        MaterialPageRoute(builder: (context) => HomePage()),
+        MaterialPageRoute(builder: (context) => LoginPage()),
       );
     });
   }
