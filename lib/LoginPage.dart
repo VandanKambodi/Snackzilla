@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:snackzilla/forgotPass.dart';
+import 'package:snackzilla/homePage.dart';
 import 'package:snackzilla/signUp.dart';
 
 
@@ -65,10 +66,10 @@ class _LoginPageState extends State<LoginPage> {
                             cursorColor: Colors.redAccent,
                             decoration: InputDecoration(
                               prefixIcon: Icon(Icons.mail, color: Colors.grey),
-                              label: Text('Enter Your Email Address',
-                                  style: TextStyle(
+                              hintText: 'Enter Your Email Address',
+                                  hintStyle: TextStyle(
                                       color: Colors.grey,
-                                      fontFamily: 'description')),
+                                      fontFamily: 'description'),
                               border: OutlineInputBorder(
                                   borderRadius: BorderRadius.circular(20)),
                               focusedBorder: OutlineInputBorder(
@@ -91,10 +92,10 @@ class _LoginPageState extends State<LoginPage> {
                             obscureText: true,
                             decoration: InputDecoration(
                               prefixIcon: Icon(Icons.lock, color: Colors.grey),
-                              label: Text('Enter Your Password',
-                                  style: TextStyle(
+                              hintText: 'Enter Your Password',
+                                  hintStyle: TextStyle(
                                       color: Colors.grey,
-                                      fontFamily: 'description')),
+                                      fontFamily: 'description'),
                               border: OutlineInputBorder(
                                   borderRadius: BorderRadius.circular(20)),
                               focusedBorder: OutlineInputBorder(
@@ -148,7 +149,9 @@ class _LoginPageState extends State<LoginPage> {
                           const SizedBox(height: 20),
                           Center(
                             child: ElevatedButton(
-                              onPressed: () {},
+                              onPressed: () {
+                                Navigator.push(context, MaterialPageRoute(builder: (context)=> homePage()));
+                              },
                               child: Text("Sign in",
                                   style: TextStyle(
                                       color: Colors.white,

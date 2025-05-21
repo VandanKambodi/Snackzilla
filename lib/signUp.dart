@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:snackzilla/LoginPage.dart';
+import 'package:snackzilla/homePage.dart';
 
 class signUp extends StatefulWidget{
   @override
@@ -71,10 +72,10 @@ class _signUpState extends State<signUp> {
                             cursorColor: Colors.redAccent,
                             decoration: InputDecoration(
                               prefixIcon: Icon(Icons.person, color: Colors.grey),
-                              label: Text('Enter Your Name',
-                                  style: TextStyle(
+                              hintText: 'Enter Your Name',
+                                  hintStyle: TextStyle(
                                       color: Colors.grey,
-                                      fontFamily: 'description')),
+                                      fontFamily: 'description'),
                               border: OutlineInputBorder(
                                   borderRadius: BorderRadius.circular(20)),
                               focusedBorder: OutlineInputBorder(
@@ -97,10 +98,10 @@ class _signUpState extends State<signUp> {
                             cursorColor: Colors.redAccent,
                             decoration: InputDecoration(
                               prefixIcon: Icon(Icons.mail, color: Colors.grey),
-                              label: Text('Enter Your Email Address',
-                                  style: TextStyle(
+                              hintText: 'Enter Your Email Address',
+                                  hintStyle: TextStyle(
                                       color: Colors.grey,
-                                      fontFamily: 'description')),
+                                      fontFamily: 'description'),
                               border: OutlineInputBorder(
                                   borderRadius: BorderRadius.circular(20)),
                               focusedBorder: OutlineInputBorder(
@@ -123,10 +124,10 @@ class _signUpState extends State<signUp> {
                             obscureText: true,
                             decoration: InputDecoration(
                               prefixIcon: Icon(Icons.lock, color: Colors.grey),
-                              label: Text('Enter Your Password',
-                                  style: TextStyle(
+                              hintText: 'Enter Your Password',
+                                  hintStyle: TextStyle(
                                       color: Colors.grey,
-                                      fontFamily: 'description')),
+                                      fontFamily: 'description'),
                               border: OutlineInputBorder(
                                   borderRadius: BorderRadius.circular(20)),
                               focusedBorder: OutlineInputBorder(
@@ -166,7 +167,9 @@ class _signUpState extends State<signUp> {
                           const SizedBox(height: 20),
                           Center(
                             child: ElevatedButton(
-                              onPressed: () {},
+                              onPressed: () {
+                                Navigator.push(context, MaterialPageRoute(builder: (context)=> homePage()));
+                              },
                               child: Text("Sign up",
                                   style: TextStyle(
                                       color: Colors.white,
