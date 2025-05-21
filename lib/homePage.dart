@@ -2,6 +2,7 @@
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:snackzilla/profilePage.dart';
 import 'package:snackzilla/settingPage.dart';
 
 class homePage extends StatefulWidget{
@@ -336,7 +337,9 @@ class _homePageState extends State<homePage> {
             IconButton(onPressed: (){}, icon: Icon(Icons.home), color: Colors.red.shade400),
             IconButton(onPressed: (){}, icon: Icon(Icons.restaurant_menu), color: Colors.grey),
             IconButton(onPressed: (){}, icon: Icon(Icons.shopping_cart), color: Colors.grey),
-            IconButton(onPressed: (){}, icon: Icon(Icons.person), color: Colors.grey),
+            IconButton(onPressed: (){
+              Navigator.push(context, MaterialPageRoute(builder: (context)=>profilePage()));
+            }, icon: Icon(Icons.person), color: Colors.grey),
             IconButton(onPressed: (){
               Navigator.push(context, MaterialPageRoute(builder: (context)=>settingPage()));
             }, icon: Icon(Icons.settings), color: Colors.grey),

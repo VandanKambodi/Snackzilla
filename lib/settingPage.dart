@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:snackzilla/homePage.dart';
+import 'package:snackzilla/profilePage.dart';
 
 class settingPage extends StatefulWidget{
   @override
@@ -29,15 +30,20 @@ class _settingPageState extends State<settingPage> {
             children: [
               Text("Settings",style: TextStyle(color: Colors.black,fontFamily: 'title', fontSize: 20),),
               SizedBox(height: 20,),
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text("Edit profile",style: TextStyle(color: Colors.black,fontFamily: 'pageHead', fontSize: 15),),
-                    Text("Change your name, description and profile photo",style: TextStyle(color: Colors.black,fontFamily: 'description', fontSize: 12),),
-                  ],
+              GestureDetector(
+                onTap: (){
+                  Navigator.push(context, MaterialPageRoute(builder: (context)=>profilePage()));
+                },
+                child: Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text("Edit profile",style: TextStyle(color: Colors.black,fontFamily: 'pageHead', fontSize: 15),),
+                      Text("Change your name, description and profile photo",style: TextStyle(color: Colors.black,fontFamily: 'description', fontSize: 12),),
+                    ],
+                  ),
                 ),
               ),
               Padding(
@@ -130,7 +136,9 @@ class _settingPageState extends State<settingPage> {
             }, icon: Icon(Icons.home), color: Colors.grey),
             IconButton(onPressed: (){}, icon: Icon(Icons.restaurant_menu), color: Colors.grey),
             IconButton(onPressed: (){}, icon: Icon(Icons.shopping_cart), color: Colors.grey),
-            IconButton(onPressed: (){}, icon: Icon(Icons.person), color: Colors.grey),
+            IconButton(onPressed: (){
+              Navigator.push(context, MaterialPageRoute(builder: (context)=>profilePage()));
+            }, icon: Icon(Icons.person), color: Colors.grey),
             IconButton(onPressed: (){}, icon: Icon(Icons.settings), color: Colors.red.shade400),
           ],
         ),
