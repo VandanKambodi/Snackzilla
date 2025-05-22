@@ -117,7 +117,31 @@ class _profilePageState extends State<profilePage> {
                   title: Text("Logout",style: TextStyle(color: Colors.black,fontFamily: 'description', fontSize: 15),),
                 ),
               ),
-
+              SizedBox(height: 10,),
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 0.0, vertical: 0.0),
+                child: Divider(
+                  color: Colors.grey.shade400,
+                  thickness: 0.5,
+                  indent: 0,
+                  endIndent: 20,
+                ),
+              ),
+              SizedBox(height: 5,),
+              Padding(
+                padding: const EdgeInsets.only(left: 16.0),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Container(
+                      child: Text("Snackzilla",
+                        style: TextStyle(fontSize: 25,fontFamily: 'title',
+                            fontStyle: FontStyle.italic,color: Colors.grey.shade300),),
+                    ),
+                  ],
+                ),
+              ),
             ],
           ),
         ),

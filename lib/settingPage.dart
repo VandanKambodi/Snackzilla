@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:snackzilla/NotificationSetPage.dart';
 import 'package:snackzilla/homePage.dart';
 import 'package:snackzilla/profilePage.dart';
 
@@ -55,15 +56,20 @@ class _settingPageState extends State<settingPage> {
                   endIndent: 20,
                 ),
               ),
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text("Notification settings",style: TextStyle(color: Colors.black,fontFamily: 'pageHead', fontSize: 15),),
-                    Text("Define what alerts and notifications you want to see",style: TextStyle(color: Colors.black,fontFamily: 'description', fontSize: 12),),
-                  ],
+              GestureDetector(
+                onTap: (){
+                  Navigator.push(context, MaterialPageRoute(builder: (context)=>NotificationSetPage()));
+                },
+                child: Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text("Notification settings",style: TextStyle(color: Colors.black,fontFamily: 'pageHead', fontSize: 15),),
+                      Text("Define what alerts and notifications you want to see",style: TextStyle(color: Colors.black,fontFamily: 'description', fontSize: 12),),
+                    ],
+                  ),
                 ),
               ),
               Padding(
@@ -113,6 +119,21 @@ class _settingPageState extends State<settingPage> {
                   thickness: 0.5,
                   indent: 0,
                   endIndent: 20,
+                ),
+              ),
+              SizedBox(height: 5,),
+              Padding(
+                padding: const EdgeInsets.only(left: 8.0),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Container(
+                      child: Text("Snackzilla",
+                        style: TextStyle(fontSize: 25,fontFamily: 'title',
+                            fontStyle: FontStyle.italic,color: Colors.grey.shade300),),
+                    ),
+                  ],
                 ),
               ),
             ],
