@@ -1,8 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:snackzilla/NotificationSetPage.dart';
-import 'package:snackzilla/homePage.dart';
-import 'package:snackzilla/profilePage.dart';
+import 'package:snackzilla/Settings/NotificationSetPage.dart';
+import 'package:snackzilla/Home/homePage.dart';
+import 'package:snackzilla/Profile/profilePage.dart';
 
 class settingPage extends StatefulWidget{
   @override

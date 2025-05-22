@@ -2,8 +2,8 @@
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:snackzilla/profilePage.dart';
-import 'package:snackzilla/settingPage.dart';
+import 'package:snackzilla/Profile/profilePage.dart';
+import 'package:snackzilla/Settings/settingPage.dart';
 
 class homePage extends StatefulWidget{
 

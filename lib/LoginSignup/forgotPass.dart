@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:snackzilla/homePage.dart';
-import 'package:snackzilla/signUp.dart';
+import 'package:snackzilla/Home/homePage.dart';
+import 'package:snackzilla/LoginSignup/signUp.dart';
 
 
 class ForgotPass extends StatefulWidget{

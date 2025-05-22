@@ -1,8 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:snackzilla/LoginPage.dart';
-import 'package:snackzilla/homePage.dart';
-import 'package:snackzilla/settingPage.dart';
+import 'package:snackzilla/LoginSignup/LoginPage.dart';
+import 'package:snackzilla/Home/homePage.dart';
+import 'package:snackzilla/Settings/settingPage.dart';
 
 class profilePage extends StatefulWidget{
   @override

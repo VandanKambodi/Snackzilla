@@ -1,25 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:flutter/cupertino.dart';
-import 'package:snackzilla/LoginPage.dart';
-import 'package:snackzilla/homePage.dart';
+import 'package:snackzilla/LoginSignup/forgotPass.dart';
+import 'package:snackzilla/Home/homePage.dart';
+import 'package:snackzilla/LoginSignup/signUp.dart';
 
-class signUp extends StatefulWidget{
+
+class LoginPage extends StatefulWidget {
   @override
-  State<signUp> createState() => _signUpState();
+  State<LoginPage> createState() => _LoginPageState();
 }
 
-class _signUpState extends State<signUp> {
+class _LoginPageState extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Colors.red.shade400,
-        elevation: 0,
-        automaticallyImplyLeading: true,
-        iconTheme: IconThemeData(color: Colors.white),
-      ),
       backgroundColor: Colors.red.shade400,
       body:
 
@@ -31,7 +25,7 @@ class _signUpState extends State<signUp> {
               child: IntrinsicHeight(
                 child: Column(
                   children: [
-                    const SizedBox(height: 5),
+                    const SizedBox(height: 100),
                     Text(
                       "Snackzilla",
                       style: TextStyle(
@@ -48,7 +42,7 @@ class _signUpState extends State<signUp> {
                         fontSize: 8.5,
                       ),
                     ),
-                    SizedBox(height: 70,),
+                    SizedBox(height: 110,),
                     Container(
                       width: double.infinity,
                       padding: const EdgeInsets.all(24),
@@ -63,32 +57,6 @@ class _signUpState extends State<signUp> {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           const SizedBox(height: 8),
-                          Text("Full Name",
-                              style: TextStyle(
-                                  fontFamily: 'pageHead', fontSize: 16)),
-                          const SizedBox(height: 10),
-                          TextField(
-                            keyboardType: TextInputType.name,
-                            cursorColor: Colors.redAccent,
-                            decoration: InputDecoration(
-                              prefixIcon: Icon(Icons.person, color: Colors.grey),
-                              hintText: 'Enter Your Name',
-                                  hintStyle: TextStyle(
-                                      color: Colors.grey,
-                                      fontFamily: 'description'),
-                              border: OutlineInputBorder(
-                                  borderRadius: BorderRadius.circular(20)),
-                              focusedBorder: OutlineInputBorder(
-                                borderRadius: BorderRadius.circular(20),
-                                borderSide: BorderSide(color: Colors.redAccent),
-                              ),
-                              enabledBorder: OutlineInputBorder(
-                                borderRadius: BorderRadius.circular(20),
-                                borderSide: BorderSide(color: Colors.grey),
-                              ),
-                            ),
-                          ),
-                          const SizedBox(height: 16),
                           Text("Email Address",
                               style: TextStyle(
                                   fontFamily: 'pageHead', fontSize: 16)),
@@ -140,7 +108,21 @@ class _signUpState extends State<signUp> {
                               ),
                             ),
                           ),
-                          const SizedBox(height: 10),
+                          Align(
+                            alignment: Alignment.centerRight,
+                            child: TextButton(
+                              onPressed: () {
+                                Navigator.push(context, MaterialPageRoute(builder: (context) => ForgotPass()));
+                              },
+                              child: Text("Forgot Password ?",
+                                  style: TextStyle(
+                                      color: Colors.grey.shade700,
+                                      fontFamily: 'description')),
+                            style: TextButton.styleFrom(
+                              foregroundColor: Colors.white
+                            ),
+                            ),
+                          ),
                           Row(
                             children: [
                               Checkbox(value: false, onChanged: (_) {}),
@@ -170,7 +152,7 @@ class _signUpState extends State<signUp> {
                               onPressed: () {
                                 Navigator.push(context, MaterialPageRoute(builder: (context)=> homePage()));
                               },
-                              child: Text("Sign up",
+                              child: Text("Sign in",
                                   style: TextStyle(
                                       color: Colors.white,
                                       fontFamily: 'pageHead',
@@ -185,12 +167,12 @@ class _signUpState extends State<signUp> {
                               ),
                             ),
                           ),
-                          const SizedBox(height: 8),
+                          const SizedBox(height: 16),
                           Center(
                               child: Text("Other Ways to Sign In",
                                   style: TextStyle(
                                       fontFamily: 'description', fontSize: 12))),
-                          const SizedBox(height: 0),
+                          const SizedBox(height: 12),
                           Row(
                             mainAxisAlignment: MainAxisAlignment.center,
                             spacing: 15,
@@ -205,18 +187,18 @@ class _signUpState extends State<signUp> {
                                   color: Colors.black),
                             ],
                           ),
-                          const SizedBox(height: 6),
+                          const SizedBox(height: 10),
                           Row(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
-                              Text("Already Have An Account? ",
+                              Text("Don't Have An Account? ",
                                   style: TextStyle(
                                       fontFamily: 'description', fontSize: 12)),
                               GestureDetector(
                                 onTap: () {
-                                  Navigator.push(context, MaterialPageRoute(builder: (context) => LoginPage()));
+                                  Navigator.push(context, MaterialPageRoute(builder: (context) => signUp()));
                                 },
-                                child: Text("Sign In",
+                                child: Text("Sign Up",
                                     style: TextStyle(
                                         color: Colors.red.shade400,
                                         fontFamily: 'description',

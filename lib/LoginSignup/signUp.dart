@@ -1,19 +1,25 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:snackzilla/forgotPass.dart';
-import 'package:snackzilla/homePage.dart';
-import 'package:snackzilla/signUp.dart';
+import 'package:flutter/cupertino.dart';
+import 'package:snackzilla/LoginSignup/LoginPage.dart';
+import 'package:snackzilla/Home/homePage.dart';
 
-
-class LoginPage extends StatefulWidget {
+class signUp extends StatefulWidget{
   @override
-  State<LoginPage> createState() => _LoginPageState();
+  State<signUp> createState() => _signUpState();
 }
 
-class _LoginPageState extends State<LoginPage> {
+class _signUpState extends State<signUp> {
   @override
   Widget build(BuildContext context) {
+    // TODO: implement build
     return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Colors.red.shade400,
+        elevation: 0,
+        automaticallyImplyLeading: true,
+        iconTheme: IconThemeData(color: Colors.white),
+      ),
       backgroundColor: Colors.red.shade400,
       body:
 
@@ -25,7 +31,7 @@ class _LoginPageState extends State<LoginPage> {
               child: IntrinsicHeight(
                 child: Column(
                   children: [
-                    const SizedBox(height: 100),
+                    const SizedBox(height: 5),
                     Text(
                       "Snackzilla",
                       style: TextStyle(
@@ -42,7 +48,7 @@ class _LoginPageState extends State<LoginPage> {
                         fontSize: 8.5,
                       ),
                     ),
-                    SizedBox(height: 110,),
+                    SizedBox(height: 70,),
                     Container(
                       width: double.infinity,
                       padding: const EdgeInsets.all(24),
@@ -57,6 +63,32 @@ class _LoginPageState extends State<LoginPage> {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           const SizedBox(height: 8),
+                          Text("Full Name",
+                              style: TextStyle(
+                                  fontFamily: 'pageHead', fontSize: 16)),
+                          const SizedBox(height: 10),
+                          TextField(
+                            keyboardType: TextInputType.name,
+                            cursorColor: Colors.redAccent,
+                            decoration: InputDecoration(
+                              prefixIcon: Icon(Icons.person, color: Colors.grey),
+                              hintText: 'Enter Your Name',
+                                  hintStyle: TextStyle(
+                                      color: Colors.grey,
+                                      fontFamily: 'description'),
+                              border: OutlineInputBorder(
+                                  borderRadius: BorderRadius.circular(20)),
+                              focusedBorder: OutlineInputBorder(
+                                borderRadius: BorderRadius.circular(20),
+                                borderSide: BorderSide(color: Colors.redAccent),
+                              ),
+                              enabledBorder: OutlineInputBorder(
+                                borderRadius: BorderRadius.circular(20),
+                                borderSide: BorderSide(color: Colors.grey),
+                              ),
+                            ),
+                          ),
+                          const SizedBox(height: 16),
                           Text("Email Address",
                               style: TextStyle(
                                   fontFamily: 'pageHead', fontSize: 16)),
@@ -108,21 +140,7 @@ class _LoginPageState extends State<LoginPage> {
                               ),
                             ),
                           ),
-                          Align(
-                            alignment: Alignment.centerRight,
-                            child: TextButton(
-                              onPressed: () {
-                                Navigator.push(context, MaterialPageRoute(builder: (context) => ForgotPass()));
-                              },
-                              child: Text("Forgot Password ?",
-                                  style: TextStyle(
-                                      color: Colors.grey.shade700,
-                                      fontFamily: 'description')),
-                            style: TextButton.styleFrom(
-                              foregroundColor: Colors.white
-                            ),
-                            ),
-                          ),
+                          const SizedBox(height: 10),
                           Row(
                             children: [
                               Checkbox(value: false, onChanged: (_) {}),
@@ -152,7 +170,7 @@ class _LoginPageState extends State<LoginPage> {
                               onPressed: () {
                                 Navigator.push(context, MaterialPageRoute(builder: (context)=> homePage()));
                               },
-                              child: Text("Sign in",
+                              child: Text("Sign up",
                                   style: TextStyle(
                                       color: Colors.white,
                                       fontFamily: 'pageHead',
@@ -167,12 +185,12 @@ class _LoginPageState extends State<LoginPage> {
                               ),
                             ),
                           ),
-                          const SizedBox(height: 16),
+                          const SizedBox(height: 8),
                           Center(
                               child: Text("Other Ways to Sign In",
                                   style: TextStyle(
                                       fontFamily: 'description', fontSize: 12))),
-                          const SizedBox(height: 12),
+                          const SizedBox(height: 0),
                           Row(
                             mainAxisAlignment: MainAxisAlignment.center,
                             spacing: 15,
@@ -187,18 +205,18 @@ class _LoginPageState extends State<LoginPage> {
                                   color: Colors.black),
                             ],
                           ),
-                          const SizedBox(height: 10),
+                          const SizedBox(height: 6),
                           Row(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
-                              Text("Don't Have An Account? ",
+                              Text("Already Have An Account? ",
                                   style: TextStyle(
                                       fontFamily: 'description', fontSize: 12)),
                               GestureDetector(
                                 onTap: () {
-                                  Navigator.push(context, MaterialPageRoute(builder: (context) => signUp()));
+                                  Navigator.push(context, MaterialPageRoute(builder: (context) => LoginPage()));
                                 },
-                                child: Text("Sign Up",
+                                child: Text("Sign In",
                                     style: TextStyle(
                                         color: Colors.red.shade400,
                                         fontFamily: 'description',

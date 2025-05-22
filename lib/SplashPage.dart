@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:snackzilla/LoginPage.dart';
+import 'package:snackzilla/LoginSignup/LoginPage.dart';
 import 'main.dart';
 
 class SplashPage extends StatefulWidget {

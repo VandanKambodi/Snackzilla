@@ -1,9 +1,9 @@
 
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:snackzilla/homePage.dart';
-import 'package:snackzilla/profilePage.dart';
-import 'package:snackzilla/settingPage.dart';
+import 'package:snackzilla/Home/homePage.dart';
+import 'package:snackzilla/Profile/profilePage.dart';
+import 'package:snackzilla/Settings/settingPage.dart';
 
 class NotificationSetPage extends StatefulWidget{
   @override
