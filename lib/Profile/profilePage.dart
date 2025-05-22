@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:snackzilla/LoginSignup/LoginPage.dart';
 import 'package:snackzilla/Home/homePage.dart';
+import 'package:snackzilla/Profile/addressPage.dart';
 import 'package:snackzilla/Settings/settingPage.dart';
 
 class profilePage extends StatefulWidget{
@@ -96,9 +97,14 @@ class _profilePageState extends State<profilePage> {
                   ),
                 ),
               ),
-              ListTile(
-                leading: Icon(Icons.home_work_outlined),
-                title: Text("My Addresses",style: TextStyle(color: Colors.black,fontFamily: 'description', fontSize: 15),),
+              GestureDetector(
+                onTap: (){
+                  Navigator.push(context, MaterialPageRoute(builder: (context)=>addressPage()));
+                },
+                child: ListTile(
+                  leading: Icon(Icons.home_work_outlined),
+                  title: Text("My Addresses",style: TextStyle(color: Colors.black,fontFamily: 'description', fontSize: 15),),
+                ),
               ),
               ListTile(
                 leading: Icon(Icons.delivery_dining_outlined),
