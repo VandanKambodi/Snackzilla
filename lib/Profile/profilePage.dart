@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:snackzilla/LoginSignup/LoginPage.dart';
 import 'package:snackzilla/Home/homePage.dart';
 import 'package:snackzilla/Profile/addressPage.dart';
+import 'package:snackzilla/Profile/walletPage.dart';
 import 'package:snackzilla/Settings/settingPage.dart';
 
 class profilePage extends StatefulWidget{
@@ -82,18 +83,23 @@ class _profilePageState extends State<profilePage> {
                 leading: Icon(Icons.card_giftcard_sharp),
                 title: Text("My Saved Cards",style: TextStyle(color: Colors.black,fontFamily: 'description', fontSize: 15),),
               ),
-              Padding(
-                padding: const EdgeInsets.only(right: 8.0),
-                child: ListTile(
-                  leading: Icon(Icons.account_balance_wallet_outlined),
-                  title: Text("Snackzilla's Wallet",style: TextStyle(color: Colors.black,fontFamily: 'description', fontSize: 15),),
-                  trailing: Container(
-                    width: 70,
-                      height: 20,
-                      decoration: BoxDecoration(
-                        color: Colors.red.shade400,
-                      ),
-                      child: Text("  0 Coins", style: TextStyle(backgroundColor: Colors.red.shade400, color: Colors.white,),)
+              GestureDetector(
+                onTap: (){
+                  Navigator.push(context, MaterialPageRoute(builder: (context)=>walletPage()));
+                },
+                child: Padding(
+                  padding: const EdgeInsets.only(right: 8.0),
+                  child: ListTile(
+                    leading: Icon(Icons.account_balance_wallet_outlined),
+                    title: Text("Snackzilla's Wallet",style: TextStyle(color: Colors.black,fontFamily: 'description', fontSize: 15),),
+                    trailing: Container(
+                      width: 70,
+                        height: 20,
+                        decoration: BoxDecoration(
+                          color: Colors.red.shade400,
+                        ),
+                        child: Text("  0 Coins", style: TextStyle(backgroundColor: Colors.red.shade400, color: Colors.white,),)
+                    ),
                   ),
                 ),
               ),
