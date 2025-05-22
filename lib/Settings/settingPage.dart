@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:snackzilla/Settings/NotificationSetPage.dart';
 import 'package:snackzilla/Home/homePage.dart';
 import 'package:snackzilla/Profile/profilePage.dart';
+import 'package:snackzilla/Settings/accountSetPage.dart';
 
 class settingPage extends StatefulWidget{
   @override
@@ -81,15 +82,20 @@ class _settingPageState extends State<settingPage> {
                   endIndent: 20,
                 ),
               ),
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text("Account settings",style: TextStyle(color: Colors.black,fontFamily: 'pageHead', fontSize: 15),),
-                    Text("Delete your account.",style: TextStyle(color: Colors.black,fontFamily: 'description', fontSize: 12),),
-                  ],
+              GestureDetector(
+                onTap: (){
+                  Navigator.push(context, MaterialPageRoute(builder: (context)=>accountSetPage()));
+                },
+                child: Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text("Account settings",style: TextStyle(color: Colors.black,fontFamily: 'pageHead', fontSize: 15),),
+                      Text("Delete your account.",style: TextStyle(color: Colors.black,fontFamily: 'description', fontSize: 12),),
+                    ],
+                  ),
                 ),
               ),
               Padding(
