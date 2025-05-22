@@ -61,6 +61,10 @@ class _addressPageState extends State<addressPage> {
                       SizedBox(height: 10,),
                       Row(
                         children: [
+                          Icon(Icons.edit,color: Colors.red.shade600,size: 25,),
+                          SizedBox(width: 20,),
+                          Icon(Icons.delete,color: Colors.red.shade600,size: 25,),
+                          SizedBox(width: 20,),
                           Icon(Icons.share_outlined,color: Colors.red.shade600,size: 25,),
                         ],
                       )

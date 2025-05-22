@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:snackzilla/LoginSignup/LoginPage.dart';
 import 'package:snackzilla/Home/homePage.dart';
 import 'package:snackzilla/Profile/addressPage.dart';
+import 'package:snackzilla/Profile/savedCardsPage.dart';
 import 'package:snackzilla/Profile/walletPage.dart';
 import 'package:snackzilla/Settings/settingPage.dart';
 
@@ -79,9 +80,14 @@ class _profilePageState extends State<profilePage> {
                 ),
               ),
               SizedBox(height: 20,),
-              ListTile(
-                leading: Icon(Icons.card_giftcard_sharp),
-                title: Text("My Saved Cards",style: TextStyle(color: Colors.black,fontFamily: 'description', fontSize: 15),),
+              GestureDetector(
+                onTap: (){
+                  Navigator.push(context, MaterialPageRoute(builder: (context)=>savedCardsPage()));
+                },
+                child: ListTile(
+                  leading: Icon(Icons.card_giftcard_sharp),
+                  title: Text("My Saved Cards",style: TextStyle(color: Colors.black,fontFamily: 'description', fontSize: 15),),
+                ),
               ),
               GestureDetector(
                 onTap: (){
