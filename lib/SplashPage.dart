@@ -23,10 +23,10 @@ class SplashPageState extends State<SplashPage> with TickerProviderStateMixin {
     );
 
     _opacityAnimation = Tween<double>(begin: 0, end: 1).animate(_controller);
-    _scaleAnimation = Tween<double>(begin: 0.8, end: 1).animate(CurvedAnimation(
-      parent: _controller,
-      curve: Curves.easeOutBack,
-    ));
+    _scaleAnimation = Tween<double>(
+      begin: 0.8,
+      end: 1,
+    ).animate(CurvedAnimation(parent: _controller, curve: Curves.easeOutBack));
 
     _controller.forward();
 

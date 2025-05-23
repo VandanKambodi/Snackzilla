@@ -4,7 +4,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:snackzilla/LoginSignup/LoginPage.dart';
 import 'package:snackzilla/Home/homePage.dart';
 
-class signUp extends StatefulWidget{
+class signUp extends StatefulWidget {
   @override
   State<signUp> createState() => _signUpState();
 }
@@ -21,9 +21,7 @@ class _signUpState extends State<signUp> {
         iconTheme: IconThemeData(color: Colors.white),
       ),
       backgroundColor: Colors.red.shade400,
-      body:
-
-      LayoutBuilder(
+      body: LayoutBuilder(
         builder: (context, constraints) {
           return SingleChildScrollView(
             child: ConstrainedBox(
@@ -48,7 +46,7 @@ class _signUpState extends State<signUp> {
                         fontSize: 8.5,
                       ),
                     ),
-                    SizedBox(height: 70,),
+                    SizedBox(height: 70),
                     Container(
                       width: double.infinity,
                       padding: const EdgeInsets.all(24),
@@ -63,21 +61,30 @@ class _signUpState extends State<signUp> {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           const SizedBox(height: 8),
-                          Text("Full Name",
-                              style: TextStyle(
-                                  fontFamily: 'pageHead', fontSize: 16)),
+                          Text(
+                            "Full Name",
+                            style: TextStyle(
+                              fontFamily: 'pageHead',
+                              fontSize: 16,
+                            ),
+                          ),
                           const SizedBox(height: 10),
                           TextField(
                             keyboardType: TextInputType.name,
                             cursorColor: Colors.redAccent,
                             decoration: InputDecoration(
-                              prefixIcon: Icon(Icons.person, color: Colors.grey),
+                              prefixIcon: Icon(
+                                Icons.person,
+                                color: Colors.grey,
+                              ),
                               hintText: 'Enter Your Name',
-                                  hintStyle: TextStyle(
-                                      color: Colors.grey,
-                                      fontFamily: 'description'),
+                              hintStyle: TextStyle(
+                                color: Colors.grey,
+                                fontFamily: 'description',
+                              ),
                               border: OutlineInputBorder(
-                                  borderRadius: BorderRadius.circular(20)),
+                                borderRadius: BorderRadius.circular(20),
+                              ),
                               focusedBorder: OutlineInputBorder(
                                 borderRadius: BorderRadius.circular(20),
                                 borderSide: BorderSide(color: Colors.redAccent),
@@ -89,9 +96,13 @@ class _signUpState extends State<signUp> {
                             ),
                           ),
                           const SizedBox(height: 16),
-                          Text("Email Address",
-                              style: TextStyle(
-                                  fontFamily: 'pageHead', fontSize: 16)),
+                          Text(
+                            "Email Address",
+                            style: TextStyle(
+                              fontFamily: 'pageHead',
+                              fontSize: 16,
+                            ),
+                          ),
                           const SizedBox(height: 10),
                           TextField(
                             keyboardType: TextInputType.emailAddress,
@@ -99,11 +110,13 @@ class _signUpState extends State<signUp> {
                             decoration: InputDecoration(
                               prefixIcon: Icon(Icons.mail, color: Colors.grey),
                               hintText: 'Enter Your Email Address',
-                                  hintStyle: TextStyle(
-                                      color: Colors.grey,
-                                      fontFamily: 'description'),
+                              hintStyle: TextStyle(
+                                color: Colors.grey,
+                                fontFamily: 'description',
+                              ),
                               border: OutlineInputBorder(
-                                  borderRadius: BorderRadius.circular(20)),
+                                borderRadius: BorderRadius.circular(20),
+                              ),
                               focusedBorder: OutlineInputBorder(
                                 borderRadius: BorderRadius.circular(20),
                                 borderSide: BorderSide(color: Colors.redAccent),
@@ -115,9 +128,13 @@ class _signUpState extends State<signUp> {
                             ),
                           ),
                           const SizedBox(height: 16),
-                          Text("Password",
-                              style: TextStyle(
-                                  fontFamily: 'pageHead', fontSize: 16)),
+                          Text(
+                            "Password",
+                            style: TextStyle(
+                              fontFamily: 'pageHead',
+                              fontSize: 16,
+                            ),
+                          ),
                           const SizedBox(height: 10),
                           TextField(
                             cursorColor: Colors.redAccent,
@@ -125,11 +142,13 @@ class _signUpState extends State<signUp> {
                             decoration: InputDecoration(
                               prefixIcon: Icon(Icons.lock, color: Colors.grey),
                               hintText: 'Enter Your Password',
-                                  hintStyle: TextStyle(
-                                      color: Colors.grey,
-                                      fontFamily: 'description'),
+                              hintStyle: TextStyle(
+                                color: Colors.grey,
+                                fontFamily: 'description',
+                              ),
                               border: OutlineInputBorder(
-                                  borderRadius: BorderRadius.circular(20)),
+                                borderRadius: BorderRadius.circular(20),
+                              ),
                               focusedBorder: OutlineInputBorder(
                                 borderRadius: BorderRadius.circular(20),
                                 borderSide: BorderSide(color: Colors.redAccent),
@@ -150,14 +169,18 @@ class _signUpState extends State<signUp> {
                                     text: "I've read and agree to ",
                                     children: [
                                       TextSpan(
-                                          text: "privacy policy",
-                                          style: TextStyle(
-                                              color: Colors.red.shade400)),
+                                        text: "privacy policy",
+                                        style: TextStyle(
+                                          color: Colors.red.shade400,
+                                        ),
+                                      ),
                                       TextSpan(text: " and "),
                                       TextSpan(
-                                          text: "user agreement",
-                                          style: TextStyle(
-                                              color: Colors.red.shade400)),
+                                        text: "user agreement",
+                                        style: TextStyle(
+                                          color: Colors.red.shade400,
+                                        ),
+                                      ),
                                     ],
                                   ),
                                 ),
@@ -168,59 +191,89 @@ class _signUpState extends State<signUp> {
                           Center(
                             child: ElevatedButton(
                               onPressed: () {
-                                Navigator.push(context, MaterialPageRoute(builder: (context)=> homePage()));
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (context) => homePage(),
+                                  ),
+                                );
                               },
-                              child: Text("Sign up",
-                                  style: TextStyle(
-                                      color: Colors.white,
-                                      fontFamily: 'pageHead',
-                                      fontSize: 18)),
+                              child: Text(
+                                "Sign up",
+                                style: TextStyle(
+                                  color: Colors.white,
+                                  fontFamily: 'pageHead',
+                                  fontSize: 18,
+                                ),
+                              ),
                               style: ElevatedButton.styleFrom(
                                 backgroundColor: Colors.red.shade400,
                                 foregroundColor: Colors.black,
                                 shape: RoundedRectangleBorder(
-                                    borderRadius: BorderRadius.circular(30)),
+                                  borderRadius: BorderRadius.circular(30),
+                                ),
                                 padding: const EdgeInsets.symmetric(
-                                    vertical: 14, horizontal: 90),
+                                  vertical: 14,
+                                  horizontal: 90,
+                                ),
                               ),
                             ),
                           ),
                           const SizedBox(height: 8),
                           Center(
-                              child: Text("Other Ways to Sign In",
-                                  style: TextStyle(
-                                      fontFamily: 'description', fontSize: 12))),
+                            child: Text(
+                              "Other Ways to Sign In",
+                              style: TextStyle(
+                                fontFamily: 'description',
+                                fontSize: 12,
+                              ),
+                            ),
+                          ),
                           const SizedBox(height: 0),
                           Row(
                             mainAxisAlignment: MainAxisAlignment.center,
                             spacing: 15,
                             children: [
                               IconButton(
-                                  onPressed: () {},
-                                  icon: FaIcon(FontAwesomeIcons.google),
-                                  color: Colors.black),
+                                onPressed: () {},
+                                icon: FaIcon(FontAwesomeIcons.google),
+                                color: Colors.black,
+                              ),
                               IconButton(
-                                  onPressed: () {},
-                                  icon: FaIcon(FontAwesomeIcons.facebook),
-                                  color: Colors.black),
+                                onPressed: () {},
+                                icon: FaIcon(FontAwesomeIcons.facebook),
+                                color: Colors.black,
+                              ),
                             ],
                           ),
                           const SizedBox(height: 6),
                           Row(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
-                              Text("Already Have An Account? ",
-                                  style: TextStyle(
-                                      fontFamily: 'description', fontSize: 12)),
+                              Text(
+                                "Already Have An Account? ",
+                                style: TextStyle(
+                                  fontFamily: 'description',
+                                  fontSize: 12,
+                                ),
+                              ),
                               GestureDetector(
                                 onTap: () {
-                                  Navigator.push(context, MaterialPageRoute(builder: (context) => LoginPage()));
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                      builder: (context) => LoginPage(),
+                                    ),
+                                  );
                                 },
-                                child: Text("Sign In",
-                                    style: TextStyle(
-                                        color: Colors.red.shade400,
-                                        fontFamily: 'description',
-                                        fontSize: 14)),
+                                child: Text(
+                                  "Sign In",
+                                  style: TextStyle(
+                                    color: Colors.red.shade400,
+                                    fontFamily: 'description',
+                                    fontSize: 14,
+                                  ),
+                                ),
                               ),
                             ],
                           ),

@@ -4,8 +4,7 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:snackzilla/Home/homePage.dart';
 import 'package:snackzilla/LoginSignup/signUp.dart';
 
-
-class ForgotPass extends StatefulWidget{
+class ForgotPass extends StatefulWidget {
   @override
   State<ForgotPass> createState() => _forgotPassState();
 }
@@ -22,9 +21,7 @@ class _forgotPassState extends State<ForgotPass> {
         iconTheme: IconThemeData(color: Colors.white),
       ),
       backgroundColor: Colors.red.shade400,
-      body:
-
-      LayoutBuilder(
+      body: LayoutBuilder(
         builder: (context, constraints) {
           return SingleChildScrollView(
             child: ConstrainedBox(
@@ -49,7 +46,7 @@ class _forgotPassState extends State<ForgotPass> {
                         fontSize: 8.5,
                       ),
                     ),
-                    SizedBox(height: 70,),
+                    SizedBox(height: 70),
                     Container(
                       width: double.infinity,
                       padding: const EdgeInsets.all(24),
@@ -64,9 +61,13 @@ class _forgotPassState extends State<ForgotPass> {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           const SizedBox(height: 8),
-                          Text("Email Address",
-                              style: TextStyle(
-                                  fontFamily: 'pageHead', fontSize: 16)),
+                          Text(
+                            "Email Address",
+                            style: TextStyle(
+                              fontFamily: 'pageHead',
+                              fontSize: 16,
+                            ),
+                          ),
                           const SizedBox(height: 10),
                           TextField(
                             keyboardType: TextInputType.emailAddress,
@@ -74,11 +75,13 @@ class _forgotPassState extends State<ForgotPass> {
                             decoration: InputDecoration(
                               prefixIcon: Icon(Icons.mail, color: Colors.grey),
                               hintText: 'Enter Your Email Address',
-                                  hintStyle: TextStyle(
-                                      color: Colors.grey,
-                                      fontFamily: 'description'),
+                              hintStyle: TextStyle(
+                                color: Colors.grey,
+                                fontFamily: 'description',
+                              ),
                               border: OutlineInputBorder(
-                                  borderRadius: BorderRadius.circular(20)),
+                                borderRadius: BorderRadius.circular(20),
+                              ),
                               focusedBorder: OutlineInputBorder(
                                 borderRadius: BorderRadius.circular(20),
                                 borderSide: BorderSide(color: Colors.redAccent),
@@ -90,9 +93,13 @@ class _forgotPassState extends State<ForgotPass> {
                             ),
                           ),
                           const SizedBox(height: 16),
-                          Text("Password",
-                              style: TextStyle(
-                                  fontFamily: 'pageHead', fontSize: 16)),
+                          Text(
+                            "Password",
+                            style: TextStyle(
+                              fontFamily: 'pageHead',
+                              fontSize: 16,
+                            ),
+                          ),
                           const SizedBox(height: 10),
                           TextField(
                             cursorColor: Colors.redAccent,
@@ -100,11 +107,13 @@ class _forgotPassState extends State<ForgotPass> {
                             decoration: InputDecoration(
                               prefixIcon: Icon(Icons.lock, color: Colors.grey),
                               hintText: 'Enter Your Password',
-                                  hintStyle: TextStyle(
-                                      color: Colors.grey,
-                                      fontFamily: 'description'),
+                              hintStyle: TextStyle(
+                                color: Colors.grey,
+                                fontFamily: 'description',
+                              ),
                               border: OutlineInputBorder(
-                                  borderRadius: BorderRadius.circular(20)),
+                                borderRadius: BorderRadius.circular(20),
+                              ),
                               focusedBorder: OutlineInputBorder(
                                 borderRadius: BorderRadius.circular(20),
                                 borderSide: BorderSide(color: Colors.redAccent),
@@ -116,9 +125,13 @@ class _forgotPassState extends State<ForgotPass> {
                             ),
                           ),
                           const SizedBox(height: 16),
-                          Text("Confirm Password",
-                              style: TextStyle(
-                                  fontFamily: 'pageHead', fontSize: 16)),
+                          Text(
+                            "Confirm Password",
+                            style: TextStyle(
+                              fontFamily: 'pageHead',
+                              fontSize: 16,
+                            ),
+                          ),
                           const SizedBox(height: 10),
                           TextField(
                             cursorColor: Colors.redAccent,
@@ -126,11 +139,13 @@ class _forgotPassState extends State<ForgotPass> {
                             decoration: InputDecoration(
                               prefixIcon: Icon(Icons.lock, color: Colors.grey),
                               hintText: 'Enter Confirm Password',
-                                  hintStyle: TextStyle(
-                                      color: Colors.grey,
-                                      fontFamily: 'description'),
+                              hintStyle: TextStyle(
+                                color: Colors.grey,
+                                fontFamily: 'description',
+                              ),
                               border: OutlineInputBorder(
-                                  borderRadius: BorderRadius.circular(20)),
+                                borderRadius: BorderRadius.circular(20),
+                              ),
                               focusedBorder: OutlineInputBorder(
                                 borderRadius: BorderRadius.circular(20),
                                 borderSide: BorderSide(color: Colors.redAccent),
@@ -151,14 +166,18 @@ class _forgotPassState extends State<ForgotPass> {
                                     text: "I've read and agree to ",
                                     children: [
                                       TextSpan(
-                                          text: "privacy policy",
-                                          style: TextStyle(
-                                              color: Colors.red.shade400)),
+                                        text: "privacy policy",
+                                        style: TextStyle(
+                                          color: Colors.red.shade400,
+                                        ),
+                                      ),
                                       TextSpan(text: " and "),
                                       TextSpan(
-                                          text: "user agreement",
-                                          style: TextStyle(
-                                              color: Colors.red.shade400)),
+                                        text: "user agreement",
+                                        style: TextStyle(
+                                          color: Colors.red.shade400,
+                                        ),
+                                      ),
                                     ],
                                   ),
                                 ),
@@ -169,59 +188,89 @@ class _forgotPassState extends State<ForgotPass> {
                           Center(
                             child: ElevatedButton(
                               onPressed: () {
-                                Navigator.push(context, MaterialPageRoute(builder: (context)=> homePage()));
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (context) => homePage(),
+                                  ),
+                                );
                               },
-                              child: Text("Sign in",
-                                  style: TextStyle(
-                                      color: Colors.white,
-                                      fontFamily: 'pageHead',
-                                      fontSize: 18)),
+                              child: Text(
+                                "Sign in",
+                                style: TextStyle(
+                                  color: Colors.white,
+                                  fontFamily: 'pageHead',
+                                  fontSize: 18,
+                                ),
+                              ),
                               style: ElevatedButton.styleFrom(
                                 backgroundColor: Colors.red.shade400,
                                 foregroundColor: Colors.black,
                                 shape: RoundedRectangleBorder(
-                                    borderRadius: BorderRadius.circular(30)),
+                                  borderRadius: BorderRadius.circular(30),
+                                ),
                                 padding: const EdgeInsets.symmetric(
-                                    vertical: 14, horizontal: 90),
+                                  vertical: 14,
+                                  horizontal: 90,
+                                ),
                               ),
                             ),
                           ),
                           const SizedBox(height: 8),
                           Center(
-                              child: Text("Other Ways to Sign In",
-                                  style: TextStyle(
-                                      fontFamily: 'description', fontSize: 12))),
+                            child: Text(
+                              "Other Ways to Sign In",
+                              style: TextStyle(
+                                fontFamily: 'description',
+                                fontSize: 12,
+                              ),
+                            ),
+                          ),
                           const SizedBox(height: 0),
                           Row(
                             mainAxisAlignment: MainAxisAlignment.center,
                             spacing: 15,
                             children: [
                               IconButton(
-                                  onPressed: () {},
-                                  icon: FaIcon(FontAwesomeIcons.google),
-                                  color: Colors.black),
+                                onPressed: () {},
+                                icon: FaIcon(FontAwesomeIcons.google),
+                                color: Colors.black,
+                              ),
                               IconButton(
-                                  onPressed: () {},
-                                  icon: FaIcon(FontAwesomeIcons.facebook),
-                                  color: Colors.black),
+                                onPressed: () {},
+                                icon: FaIcon(FontAwesomeIcons.facebook),
+                                color: Colors.black,
+                              ),
                             ],
                           ),
                           const SizedBox(height: 6),
                           Row(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
-                              Text("Don't Have An Account? ",
-                                  style: TextStyle(
-                                      fontFamily: 'description', fontSize: 12)),
+                              Text(
+                                "Don't Have An Account? ",
+                                style: TextStyle(
+                                  fontFamily: 'description',
+                                  fontSize: 12,
+                                ),
+                              ),
                               GestureDetector(
                                 onTap: () {
-                                  Navigator.push(context, MaterialPageRoute(builder: (context) => signUp()));
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                      builder: (context) => signUp(),
+                                    ),
+                                  );
                                 },
-                                child: Text("Sign Up",
-                                    style: TextStyle(
-                                        color: Colors.red.shade400,
-                                        fontFamily: 'description',
-                                        fontSize: 14)),
+                                child: Text(
+                                  "Sign Up",
+                                  style: TextStyle(
+                                    color: Colors.red.shade400,
+                                    fontFamily: 'description',
+                                    fontSize: 14,
+                                  ),
+                                ),
                               ),
                             ],
                           ),

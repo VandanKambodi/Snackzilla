@@ -4,6 +4,7 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:snackzilla/menu/menuPage.dart';
 
 class myOrder extends StatefulWidget{
+class myOrder extends StatefulWidget {
   @override
   State<myOrder> createState() => _myOrderState();
 }
@@ -45,36 +46,64 @@ class _myOrderState extends State<myOrder> {
       ratingCount: 160,
       isVeg: true,
     ),
-   
+    FoodItem(
+      name: "Cheese ramen bowl",
+      description: "Cheese with egg noodles...",
+      imageUrl: "assets/Images/fri.jpg",
+      price: 45.00,
+      rating: 4.7,
+      ratingCount: 160,
+      isVeg: true,
+    ),
+    FoodItem(
+      name: "Cheese ramen bowl",
+      description: "Cheese with egg noodles...",
+      imageUrl: "assets/Images/fri.jpg",
+      price: 45.00,
+      rating: 4.7,
+      ratingCount: 160,
+      isVeg: true,
+    ),
   ];
 
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
     return Scaffold(
-      appBar: PreferredSize(preferredSize: Size.fromHeight(56.0),
+      appBar: PreferredSize(
+        preferredSize: Size.fromHeight(56.0),
         child: AppBar(
           automaticallyImplyLeading: true,
           elevation: 0,
           backgroundColor: Colors.transparent,
           iconTheme: IconThemeData(color: Colors.black, size: 25),
-          flexibleSpace: 
-            Container(
-              decoration: BoxDecoration(
-                  gradient: LinearGradient(colors: [Colors.red.shade600,Colors.white],begin: Alignment.topCenter,end: Alignment.bottomCenter)
+          flexibleSpace: Container(
+            decoration: BoxDecoration(
+              gradient: LinearGradient(
+                colors: [Colors.red.shade600, Colors.white],
+                begin: Alignment.topCenter,
+                end: Alignment.bottomCenter,
               ),
-              child: Padding(
-                padding: const EdgeInsets.only(
-                  top: 33.0,
-                  right: 0.0,
-                  left: 55.0,
-                  bottom: 10.0,
-                ),
-                child: Container(
-                  child: Text("My Order",style: TextStyle(color: Colors.grey.shade900,fontFamily: 'title', fontSize: 20),),
+            ),
+            child: Padding(
+              padding: const EdgeInsets.only(
+                top: 33.0,
+                right: 0.0,
+                left: 55.0,
+                bottom: 10.0,
+              ),
+              child: Container(
+                child: Text(
+                  "My Order",
+                  style: TextStyle(
+                    color: Colors.grey.shade900,
+                    fontFamily: 'title',
+                    fontSize: 20,
+                  ),
                 ),
               ),
             ),
+          ),
         ),
       ),
       body: SafeArea(
@@ -84,7 +113,7 @@ class _myOrderState extends State<myOrder> {
             final item = items[index];
             return Card(
               color: Colors.grey.shade100,
-              margin: EdgeInsets.only(bottom: 0,left: 8,right: 8,top:20),
+              margin: EdgeInsets.only(bottom: 20, left: 18, right: 18, top: 25),
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(16),
               ),
@@ -92,8 +121,8 @@ class _myOrderState extends State<myOrder> {
                 height: 145,
                 child: Row(
                   crossAxisAlignment:
-                  CrossAxisAlignment
-                      .stretch, // Important for full height image
+                      CrossAxisAlignment
+                          .stretch, // Important for full height image
                   children: [
                     ClipRRect(
                       borderRadius: BorderRadius.only(
@@ -215,7 +244,7 @@ class _myOrderState extends State<myOrder> {
                                         ),
                                       ),
                                       child: Text(
-                                        "+ Add",
+                                        "+   1   -",
                                         style: TextStyle(
                                           fontSize: 12,
                                           fontFamily: 'pageHead',
@@ -240,19 +269,21 @@ class _myOrderState extends State<myOrder> {
       ),
 
       backgroundColor: Colors.white,
-      bottomNavigationBar:
-      Container(
+      bottomNavigationBar: Container(
         height: 230,
         padding: EdgeInsets.symmetric(vertical: 12),
-        decoration: BoxDecoration(
-          color: Colors.white,
-        ),
+        decoration: BoxDecoration(color: Colors.white),
         child: Padding(
           padding: const EdgeInsets.all(12.0),
           child: Column(
             children: [
               Padding(
-                padding: const EdgeInsets.only(right: 8.0,left: 8.0,bottom: 8.0,top: 0.0),
+                padding: const EdgeInsets.only(
+                  right: 8.0,
+                  left: 8.0,
+                  bottom: 8.0,
+                  top: 0.0,
+                ),
                 child: Divider(
                   color: Colors.grey.shade400,
                   thickness: 2,
@@ -260,29 +291,35 @@ class _myOrderState extends State<myOrder> {
                   endIndent: 0,
                 ),
               ),
-              SizedBox(height: 10,),
+              SizedBox(height: 10),
               Padding(
-                padding: const EdgeInsets.only(left: 8.0,right: 8.0),
+                padding: const EdgeInsets.only(left: 8.0, right: 8.0),
                 child: Row(
                   crossAxisAlignment: CrossAxisAlignment.center,
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Text("Delivery Service",style: TextStyle(
-                      color: Colors.grey.shade800,
-                      fontFamily: 'description',
-                      fontSize: 12,
-                    ),),
-                    Text("\$ 0.00",style: TextStyle(
-                      color: Colors.grey.shade800,
-                      fontFamily: 'description',
-                      fontSize: 14,
-                    ),)
+                    Text(
+                      "Delivery Service",
+                      style: TextStyle(
+                        color: Colors.grey.shade800,
+                        fontFamily: 'description',
+                        fontSize: 12,
+                      ),
+                    ),
+                    Text(
+                      "\$ 0.00",
+                      style: TextStyle(
+                        color: Colors.grey.shade800,
+                        fontFamily: 'description',
+                        fontSize: 14,
+                      ),
+                    ),
                   ],
                 ),
               ),
-              SizedBox(height: 40,),
+              SizedBox(height: 40),
               Padding(
-                padding: const EdgeInsets.only(left: 8.0,right: 8.0),
+                padding: const EdgeInsets.only(left: 8.0, right: 8.0),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -290,40 +327,51 @@ class _myOrderState extends State<myOrder> {
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Text("Total Price",style: TextStyle(
-                          color: Colors.grey.shade800,
-                          fontFamily: 'description',
-                          fontSize: 10,
-                        ),),
-                        SizedBox(height: 4,),
-                        Text("\$ 35.00",style: TextStyle(
-                          color: Colors.grey.shade800,
-                          fontFamily: 'description',
-                          fontSize: 24,
-                        ),),
+                        Text(
+                          "Total Price",
+                          style: TextStyle(
+                            color: Colors.grey.shade800,
+                            fontFamily: 'description',
+                            fontSize: 10,
+                          ),
+                        ),
+                        SizedBox(height: 4),
+                        Text(
+                          "\$ 35.00",
+                          style: TextStyle(
+                            color: Colors.grey.shade800,
+                            fontFamily: 'pageHead',
+                            fontSize: 24,
+                          ),
+                        ),
                       ],
                     ),
                     Container(
                       width: 170,
                       height: 55,
-                      child: ElevatedButton(onPressed: (){}, child: Text("Checkout",style: TextStyle(
-                        color: Colors.white,
-                        fontFamily: 'pageHead',
-                        fontSize: 14,
-                      ),),
-                      style: ElevatedButton.styleFrom(foregroundColor: Colors.red.shade600,backgroundColor: Colors.red.shade600,
-
-                      )),
-                    )
+                      child: ElevatedButton(
+                        onPressed: () {},
+                        child: Text(
+                          "Checkout",
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontFamily: 'pageHead',
+                            fontSize: 14,
+                          ),
+                        ),
+                        style: ElevatedButton.styleFrom(
+                          foregroundColor: Colors.red.shade600,
+                          backgroundColor: Colors.red.shade600,
+                        ),
+                      ),
+                    ),
                   ],
                 ),
-              )
+              ),
             ],
           ),
         ),
       ),
-
-
     );
   }
 }

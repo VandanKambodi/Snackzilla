@@ -90,7 +90,11 @@ class _menuPageState extends State<menuPage> {
           elevation: 0,
           flexibleSpace: Container(
             decoration: BoxDecoration(
-                gradient: LinearGradient(colors: [Colors.red.shade600,Colors.white],begin: Alignment.topCenter,end: Alignment.bottomCenter)
+              gradient: LinearGradient(
+                colors: [Colors.red.shade600, Colors.white],
+                begin: Alignment.topCenter,
+                end: Alignment.bottomCenter,
+              ),
             ),
             child: Column(
               children: [
@@ -154,7 +158,7 @@ class _menuPageState extends State<menuPage> {
             final item = items[index];
             return Card(
               color: Colors.grey.shade100,
-              margin: EdgeInsets.only(bottom: 0,left: 8,right: 8,top:20),
+              margin: EdgeInsets.only(bottom: 0, left: 8, right: 8, top: 20),
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(16),
               ),

@@ -4,7 +4,6 @@ import 'package:snackzilla/LoginSignup/forgotPass.dart';
 import 'package:snackzilla/Home/homePage.dart';
 import 'package:snackzilla/LoginSignup/signUp.dart';
 
-
 class LoginPage extends StatefulWidget {
   @override
   State<LoginPage> createState() => _LoginPageState();
@@ -15,9 +14,7 @@ class _LoginPageState extends State<LoginPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.red.shade400,
-      body:
-
-      LayoutBuilder(
+      body: LayoutBuilder(
         builder: (context, constraints) {
           return SingleChildScrollView(
             child: ConstrainedBox(
@@ -42,7 +39,7 @@ class _LoginPageState extends State<LoginPage> {
                         fontSize: 8.5,
                       ),
                     ),
-                    SizedBox(height: 110,),
+                    SizedBox(height: 110),
                     Container(
                       width: double.infinity,
                       padding: const EdgeInsets.all(24),
@@ -57,9 +54,13 @@ class _LoginPageState extends State<LoginPage> {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           const SizedBox(height: 8),
-                          Text("Email Address",
-                              style: TextStyle(
-                                  fontFamily: 'pageHead', fontSize: 16)),
+                          Text(
+                            "Email Address",
+                            style: TextStyle(
+                              fontFamily: 'pageHead',
+                              fontSize: 16,
+                            ),
+                          ),
                           const SizedBox(height: 10),
                           TextField(
                             keyboardType: TextInputType.emailAddress,
@@ -67,11 +68,13 @@ class _LoginPageState extends State<LoginPage> {
                             decoration: InputDecoration(
                               prefixIcon: Icon(Icons.mail, color: Colors.grey),
                               hintText: 'Enter Your Email Address',
-                                  hintStyle: TextStyle(
-                                      color: Colors.grey,
-                                      fontFamily: 'description'),
+                              hintStyle: TextStyle(
+                                color: Colors.grey,
+                                fontFamily: 'description',
+                              ),
                               border: OutlineInputBorder(
-                                  borderRadius: BorderRadius.circular(20)),
+                                borderRadius: BorderRadius.circular(20),
+                              ),
                               focusedBorder: OutlineInputBorder(
                                 borderRadius: BorderRadius.circular(20),
                                 borderSide: BorderSide(color: Colors.redAccent),
@@ -83,9 +86,13 @@ class _LoginPageState extends State<LoginPage> {
                             ),
                           ),
                           const SizedBox(height: 16),
-                          Text("Password",
-                              style: TextStyle(
-                                  fontFamily: 'pageHead', fontSize: 16)),
+                          Text(
+                            "Password",
+                            style: TextStyle(
+                              fontFamily: 'pageHead',
+                              fontSize: 16,
+                            ),
+                          ),
                           const SizedBox(height: 10),
                           TextField(
                             cursorColor: Colors.redAccent,
@@ -93,11 +100,13 @@ class _LoginPageState extends State<LoginPage> {
                             decoration: InputDecoration(
                               prefixIcon: Icon(Icons.lock, color: Colors.grey),
                               hintText: 'Enter Your Password',
-                                  hintStyle: TextStyle(
-                                      color: Colors.grey,
-                                      fontFamily: 'description'),
+                              hintStyle: TextStyle(
+                                color: Colors.grey,
+                                fontFamily: 'description',
+                              ),
                               border: OutlineInputBorder(
-                                  borderRadius: BorderRadius.circular(20)),
+                                borderRadius: BorderRadius.circular(20),
+                              ),
                               focusedBorder: OutlineInputBorder(
                                 borderRadius: BorderRadius.circular(20),
                                 borderSide: BorderSide(color: Colors.redAccent),
@@ -112,15 +121,23 @@ class _LoginPageState extends State<LoginPage> {
                             alignment: Alignment.centerRight,
                             child: TextButton(
                               onPressed: () {
-                                Navigator.push(context, MaterialPageRoute(builder: (context) => ForgotPass()));
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (context) => ForgotPass(),
+                                  ),
+                                );
                               },
-                              child: Text("Forgot Password ?",
-                                  style: TextStyle(
-                                      color: Colors.grey.shade700,
-                                      fontFamily: 'description')),
-                            style: TextButton.styleFrom(
-                              foregroundColor: Colors.white
-                            ),
+                              child: Text(
+                                "Forgot Password ?",
+                                style: TextStyle(
+                                  color: Colors.grey.shade700,
+                                  fontFamily: 'description',
+                                ),
+                              ),
+                              style: TextButton.styleFrom(
+                                foregroundColor: Colors.white,
+                              ),
                             ),
                           ),
                           Row(
@@ -132,14 +149,18 @@ class _LoginPageState extends State<LoginPage> {
                                     text: "I've read and agree to ",
                                     children: [
                                       TextSpan(
-                                          text: "privacy policy",
-                                          style: TextStyle(
-                                              color: Colors.red.shade400)),
+                                        text: "privacy policy",
+                                        style: TextStyle(
+                                          color: Colors.red.shade400,
+                                        ),
+                                      ),
                                       TextSpan(text: " and "),
                                       TextSpan(
-                                          text: "user agreement",
-                                          style: TextStyle(
-                                              color: Colors.red.shade400)),
+                                        text: "user agreement",
+                                        style: TextStyle(
+                                          color: Colors.red.shade400,
+                                        ),
+                                      ),
                                     ],
                                   ),
                                 ),
@@ -150,59 +171,89 @@ class _LoginPageState extends State<LoginPage> {
                           Center(
                             child: ElevatedButton(
                               onPressed: () {
-                                Navigator.push(context, MaterialPageRoute(builder: (context)=> homePage()));
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (context) => homePage(),
+                                  ),
+                                );
                               },
-                              child: Text("Sign in",
-                                  style: TextStyle(
-                                      color: Colors.white,
-                                      fontFamily: 'pageHead',
-                                      fontSize: 18)),
+                              child: Text(
+                                "Sign in",
+                                style: TextStyle(
+                                  color: Colors.white,
+                                  fontFamily: 'pageHead',
+                                  fontSize: 18,
+                                ),
+                              ),
                               style: ElevatedButton.styleFrom(
                                 backgroundColor: Colors.red.shade400,
                                 foregroundColor: Colors.black,
                                 shape: RoundedRectangleBorder(
-                                    borderRadius: BorderRadius.circular(30)),
+                                  borderRadius: BorderRadius.circular(30),
+                                ),
                                 padding: const EdgeInsets.symmetric(
-                                    vertical: 14, horizontal: 90),
+                                  vertical: 14,
+                                  horizontal: 90,
+                                ),
                               ),
                             ),
                           ),
                           const SizedBox(height: 16),
                           Center(
-                              child: Text("Other Ways to Sign In",
-                                  style: TextStyle(
-                                      fontFamily: 'description', fontSize: 12))),
+                            child: Text(
+                              "Other Ways to Sign In",
+                              style: TextStyle(
+                                fontFamily: 'description',
+                                fontSize: 12,
+                              ),
+                            ),
+                          ),
                           const SizedBox(height: 12),
                           Row(
                             mainAxisAlignment: MainAxisAlignment.center,
                             spacing: 15,
                             children: [
                               IconButton(
-                                  onPressed: () {},
-                                  icon: FaIcon(FontAwesomeIcons.google),
-                                  color: Colors.black),
+                                onPressed: () {},
+                                icon: FaIcon(FontAwesomeIcons.google),
+                                color: Colors.black,
+                              ),
                               IconButton(
-                                  onPressed: () {},
-                                  icon: FaIcon(FontAwesomeIcons.facebook),
-                                  color: Colors.black),
+                                onPressed: () {},
+                                icon: FaIcon(FontAwesomeIcons.facebook),
+                                color: Colors.black,
+                              ),
                             ],
                           ),
                           const SizedBox(height: 10),
                           Row(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
-                              Text("Don't Have An Account? ",
-                                  style: TextStyle(
-                                      fontFamily: 'description', fontSize: 12)),
+                              Text(
+                                "Don't Have An Account? ",
+                                style: TextStyle(
+                                  fontFamily: 'description',
+                                  fontSize: 12,
+                                ),
+                              ),
                               GestureDetector(
                                 onTap: () {
-                                  Navigator.push(context, MaterialPageRoute(builder: (context) => signUp()));
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                      builder: (context) => signUp(),
+                                    ),
+                                  );
                                 },
-                                child: Text("Sign Up",
-                                    style: TextStyle(
-                                        color: Colors.red.shade400,
-                                        fontFamily: 'description',
-                                        fontSize: 14)),
+                                child: Text(
+                                  "Sign Up",
+                                  style: TextStyle(
+                                    color: Colors.red.shade400,
+                                    fontFamily: 'description',
+                                    fontSize: 14,
+                                  ),
+                                ),
                               ),
                             ],
                           ),
