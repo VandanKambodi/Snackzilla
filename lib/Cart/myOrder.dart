@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:snackzilla/Cart/checkoutPage.dart';
 import 'package:snackzilla/menu/menuPage.dart';
 
 class myOrder extends StatefulWidget {
@@ -349,7 +350,14 @@ class _myOrderState extends State<myOrder> {
                       width: 170,
                       height: 55,
                       child: ElevatedButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => checkoutPage(),
+                            ),
+                          );
+                        },
                         child: Text(
                           "Checkout",
                           style: TextStyle(
