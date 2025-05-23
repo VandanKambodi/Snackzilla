@@ -4,6 +4,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:snackzilla/Profile/profilePage.dart';
 import 'package:snackzilla/Settings/settingPage.dart';
+import 'package:snackzilla/menu/menuPage.dart';
 
 class homePage extends StatefulWidget{
 
@@ -335,7 +336,9 @@ class _homePageState extends State<homePage> {
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
             IconButton(onPressed: (){}, icon: Icon(Icons.home), color: Colors.red.shade400),
-            IconButton(onPressed: (){}, icon: Icon(Icons.restaurant_menu), color: Colors.grey),
+            IconButton(onPressed: (){
+              Navigator.push(context, MaterialPageRoute(builder: (context)=>menuPage()));
+            }, icon: Icon(Icons.restaurant_menu), color: Colors.grey),
             IconButton(onPressed: (){}, icon: Icon(Icons.shopping_cart), color: Colors.grey),
             IconButton(onPressed: (){
               Navigator.push(context, MaterialPageRoute(builder: (context)=>profilePage()));
@@ -381,11 +384,11 @@ class BurgerCard extends StatelessWidget {
                     ),
                   ),
                   CircleAvatar(
-                    backgroundColor: Colors.white,
+                    backgroundColor: Colors.red.shade600,
                     radius: 14,
                     child: Text(
                       burger['rating'].toString(),
-                      style: TextStyle(fontWeight: FontWeight.bold,color: Colors.red.shade400),
+                      style: TextStyle(fontWeight: FontWeight.bold,color: Colors.white,fontSize: 12),
                     ),
                   ),
                 ],
@@ -393,29 +396,54 @@ class BurgerCard extends StatelessWidget {
               SizedBox(height: 8),
               Text(
                 burger['name'],
-                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16, fontFamily: 'pageHead'),
+                style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  fontSize: 14,
+                  fontFamily: 'pageHead',
+                ),
               ),
-              Text(burger['restaurant'], style: TextStyle(color: Colors.grey, fontFamily: 'description', fontSize: 12)),
+              Text(burger['restaurant'], style: TextStyle(
+                color: Colors.grey,
+                fontFamily: 'description',
+                fontSize: 10,
+              ),
+              ),
+
               SizedBox(height: 8),
               Row(
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
-                  Icon(Icons.timer, size: 14),
+                  Icon(Icons.watch_later_rounded, size: 14),
                   SizedBox(width: 2),
-                  Text(burger['time'],style: TextStyle(fontSize: 12, fontFamily: 'pageHead'),),
-                  SizedBox(width: 6),
+                  Text(burger['time'],style: TextStyle(
+                    color: Colors.black,
+                    fontFamily: 'description',
+                    fontSize: 12,
+                  ),),
+                  SizedBox(width: 10),
                   Icon(Icons.local_fire_department, size: 16),
                   SizedBox(width: 2),
-                  Text(burger['calories'],style: TextStyle(fontSize: 12, fontFamily: 'pageHead'),),
+                  Text(burger['calories'],style: TextStyle(
+                    color: Colors.black,
+                    fontFamily: 'description',
+                    fontSize: 12,
+                  ),),
                 ],
               ),
               SizedBox(height: 8),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Text(burger['price'], style: TextStyle(fontWeight: FontWeight.bold)),
-                  IconButton(onPressed: () {}, icon: Icon(Icons.add_circle)),
-                ],
+              Padding(
+                padding: const EdgeInsets.only(left: 2.0),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text(burger['price'],style: TextStyle(
+                      color: Colors.black,
+                      fontFamily: 'pageHead',
+                      fontSize: 14,
+                    ),),
+                    IconButton(onPressed: () {}, icon: Icon(Icons.add_circle,size: 30,color: Colors.black,)),
+                  ],
+                ),
               )
             ],
           ),

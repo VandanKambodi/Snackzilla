@@ -5,6 +5,7 @@ import 'package:snackzilla/Home/homePage.dart';
 import 'package:snackzilla/Profile/profilePage.dart';
 import 'package:snackzilla/Settings/accountSetPage.dart';
 import 'package:snackzilla/Settings/paymentSet.dart';
+import 'package:snackzilla/menu/menuPage.dart';
 
 class settingPage extends StatefulWidget{
   @override
@@ -167,7 +168,9 @@ class _settingPageState extends State<settingPage> {
             IconButton(onPressed: (){
               Navigator.push(context, MaterialPageRoute(builder: (context)=>homePage()));
             }, icon: Icon(Icons.home), color: Colors.grey),
-            IconButton(onPressed: (){}, icon: Icon(Icons.restaurant_menu), color: Colors.grey),
+            IconButton(onPressed: (){
+              Navigator.push(context, MaterialPageRoute(builder: (context)=>menuPage()));
+            }, icon: Icon(Icons.restaurant_menu), color: Colors.grey),
             IconButton(onPressed: (){}, icon: Icon(Icons.shopping_cart), color: Colors.grey),
             IconButton(onPressed: (){
               Navigator.push(context, MaterialPageRoute(builder: (context)=>profilePage()));

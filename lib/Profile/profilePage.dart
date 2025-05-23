@@ -6,6 +6,7 @@ import 'package:snackzilla/Profile/addressPage.dart';
 import 'package:snackzilla/Profile/savedCardsPage.dart';
 import 'package:snackzilla/Profile/walletPage.dart';
 import 'package:snackzilla/Settings/settingPage.dart';
+import 'package:snackzilla/menu/menuPage.dart';
 
 class profilePage extends StatefulWidget{
   @override
@@ -190,7 +191,9 @@ class _profilePageState extends State<profilePage> {
             IconButton(onPressed: (){
               Navigator.push(context, MaterialPageRoute(builder: (context)=>homePage()));
             }, icon: Icon(Icons.home), color: Colors.grey),
-            IconButton(onPressed: (){}, icon: Icon(Icons.restaurant_menu), color: Colors.grey),
+            IconButton(onPressed: (){
+              Navigator.push(context, MaterialPageRoute(builder: (context)=> menuPage()));
+            }, icon: Icon(Icons.restaurant_menu), color: Colors.grey),
             IconButton(onPressed: (){}, icon: Icon(Icons.shopping_cart), color: Colors.grey),
             IconButton(onPressed: (){}, icon: Icon(Icons.person), color: Colors.red.shade400),
             IconButton(onPressed: (){
