@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:snackzilla/Cart/myOrder.dart';
 import 'package:snackzilla/LoginSignup/LoginPage.dart';
 import 'package:snackzilla/Home/homePage.dart';
 import 'package:snackzilla/Profile/addressPage.dart';
@@ -121,9 +122,14 @@ class _profilePageState extends State<profilePage> {
                     title: Text("My Addresses",style: TextStyle(color: Colors.black,fontFamily: 'description', fontSize: 15),),
                   ),
                 ),
-                ListTile(
-                  leading: Icon(Icons.delivery_dining_outlined),
-                  title: Text("My Orders",style: TextStyle(color: Colors.black,fontFamily: 'description', fontSize: 15),),
+                GestureDetector(
+                  onTap: (){
+                    Navigator.push(context, MaterialPageRoute(builder: (context)=>myOrder()));
+                  },
+                  child: ListTile(
+                    leading: Icon(Icons.delivery_dining_outlined),
+                    title: Text("My Orders",style: TextStyle(color: Colors.black,fontFamily: 'description', fontSize: 15),),
+                  ),
                 ),
                 ListTile(
                   leading: Icon(Icons.contact_page_outlined),
@@ -194,7 +200,12 @@ class _profilePageState extends State<profilePage> {
             IconButton(onPressed: (){
               Navigator.push(context, MaterialPageRoute(builder: (context)=> menuPage()));
             }, icon: Icon(Icons.restaurant_menu), color: Colors.grey),
-            IconButton(onPressed: (){}, icon: Icon(Icons.shopping_cart), color: Colors.grey),
+            IconButton(onPressed: (){
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => myOrder()),
+              );
+            }, icon: Icon(Icons.shopping_cart), color: Colors.grey),
             IconButton(onPressed: (){}, icon: Icon(Icons.person), color: Colors.red.shade400),
             IconButton(onPressed: (){
               Navigator.push(context, MaterialPageRoute(builder: (context)=>settingPage()));

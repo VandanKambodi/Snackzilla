@@ -1,14 +1,11 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:snackzilla/Cart/myOrder.dart';
-import 'package:snackzilla/Home/homePage.dart';
-import 'package:snackzilla/Profile/profilePage.dart';
-import 'package:snackzilla/Settings/settingPage.dart';
+import 'package:snackzilla/menu/menuPage.dart';
 
-class menuPage extends StatefulWidget {
+class myOrder extends StatefulWidget{
   @override
-  State<menuPage> createState() => _menuPageState();
+  State<myOrder> createState() => _myOrderState();
 }
 
 class FoodItem {
@@ -28,7 +25,7 @@ class FoodItem {
   });
 }
 
-class _menuPageState extends State<menuPage> {
+class _myOrderState extends State<myOrder> {
   final List<FoodItem> items = [
     FoodItem(
       name: "Classic Cheeseburger",
@@ -48,105 +45,38 @@ class _menuPageState extends State<menuPage> {
       ratingCount: 160,
       isVeg: true,
     ),
-    FoodItem(
-      name: "Classic Salad",
-      description: "Cucumber and tomato with...",
-      imageUrl: "assets/Images/fri.jpg",
-      price: 25.00,
-      rating: 4.4,
-      ratingCount: 20,
-      isVeg: true,
-    ),
-    FoodItem(
-      name: "Salty french fries",
-      description: "Classic rich potato with...",
-      imageUrl: "assets/Images/fri.jpg",
-      price: 25.00,
-      rating: 4.5,
-      ratingCount: 50,
-      isVeg: true,
-    ),
-    FoodItem(
-      name: "Classic pizza",
-      description: "Regular pizza with...",
-      imageUrl: "assets/Images/fri.jpg",
-      price: 40.00,
-      rating: 4.8,
-      ratingCount: 60,
-      isVeg: true,
-    ),
+   
   ];
 
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
     return Scaffold(
-      appBar: PreferredSize(
-        preferredSize: Size.fromHeight(70.0),
+      appBar: PreferredSize(preferredSize: Size.fromHeight(56.0),
         child: AppBar(
           automaticallyImplyLeading: true,
-          backgroundColor: Colors.red.shade600,
-          iconTheme: IconThemeData(color: Colors.black, size: 25),
           elevation: 0,
-          flexibleSpace: Container(
-            decoration: BoxDecoration(
-                gradient: LinearGradient(colors: [Colors.red.shade600,Colors.white],begin: Alignment.topCenter,end: Alignment.bottomCenter)
-            ),
-            child: Column(
-              children: [
-                Padding(
-                  padding: const EdgeInsets.only(
-                    top: 28.0,
-                    right: 0.0,
-                    left: 35.0,
-                    bottom: 10.0,
-                  ),
-                  child: SizedBox(
-                    width: 350,
-                    height: 50,
-                    child: TextField(
-                      style: TextStyle(
-                        color: Colors.grey.shade800,
-                        fontFamily: 'description',
-                        fontSize: 14,
-                      ),
-                      cursorHeight: 20,
-                      cursorColor: Colors.black,
-                      decoration: InputDecoration(
-                        filled: true,
-                        contentPadding: EdgeInsets.symmetric(vertical: 12.0),
-                        prefixIconColor: Colors.grey.shade800,
-                        suffixIconColor: Colors.grey.shade800,
-                        fillColor: Colors.grey.shade100,
-                        prefixIcon: Icon(Icons.search),
-                        suffixIcon: Icon(Icons.keyboard_voice_sharp),
-                        hintText: "Search..",
-                        hintStyle: TextStyle(
-                          color: Colors.grey.shade800,
-                          fontFamily: 'description',
-                          fontSize: 14,
-                        ),
-                        border: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(30),
-                        ),
-                        enabledBorder: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(30),
-                          borderSide: BorderSide(color: Colors.white),
-                        ),
-                        focusedBorder: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(30),
-                          borderSide: BorderSide(color: Colors.white),
-                        ),
-                      ),
-                    ),
-                  ),
+          backgroundColor: Colors.transparent,
+          iconTheme: IconThemeData(color: Colors.black, size: 25),
+          flexibleSpace: 
+            Container(
+              decoration: BoxDecoration(
+                  gradient: LinearGradient(colors: [Colors.red.shade600,Colors.white],begin: Alignment.topCenter,end: Alignment.bottomCenter)
+              ),
+              child: Padding(
+                padding: const EdgeInsets.only(
+                  top: 33.0,
+                  right: 0.0,
+                  left: 55.0,
+                  bottom: 10.0,
                 ),
-              ],
+                child: Container(
+                  child: Text("My Order",style: TextStyle(color: Colors.grey.shade900,fontFamily: 'title', fontSize: 20),),
+                ),
+              ),
             ),
-          ),
         ),
       ),
-
       body: SafeArea(
         child: ListView.builder(
           itemCount: items.length,
@@ -162,8 +92,8 @@ class _menuPageState extends State<menuPage> {
                 height: 145,
                 child: Row(
                   crossAxisAlignment:
-                      CrossAxisAlignment
-                          .stretch, // Important for full height image
+                  CrossAxisAlignment
+                      .stretch, // Important for full height image
                   children: [
                     ClipRRect(
                       borderRadius: BorderRadius.only(
@@ -310,63 +240,90 @@ class _menuPageState extends State<menuPage> {
       ),
 
       backgroundColor: Colors.white,
-      bottomNavigationBar: Container(
+      bottomNavigationBar:
+      Container(
+        height: 230,
         padding: EdgeInsets.symmetric(vertical: 12),
         decoration: BoxDecoration(
           color: Colors.white,
-          border: Border(top: BorderSide(color: Colors.grey.shade300)),
         ),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceAround,
-          children: [
-            IconButton(
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => homePage()),
-                );
-              },
-              icon: Icon(Icons.home),
-              color: Colors.grey,
-            ),
-            IconButton(
-              onPressed: () {},
-              icon: Icon(Icons.restaurant_menu),
-              color: Colors.red.shade400,
-            ),
-            IconButton(
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => myOrder()),
-                );
-              },
-              icon: Icon(Icons.shopping_cart),
-              color: Colors.grey,
-            ),
-            IconButton(
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => profilePage()),
-                );
-              },
-              icon: Icon(Icons.person),
-              color: Colors.grey,
-            ),
-            IconButton(
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => settingPage()),
-                );
-              },
-              icon: Icon(Icons.settings),
-              color: Colors.grey,
-            ),
-          ],
+        child: Padding(
+          padding: const EdgeInsets.all(12.0),
+          child: Column(
+            children: [
+              Padding(
+                padding: const EdgeInsets.only(right: 8.0,left: 8.0,bottom: 8.0,top: 0.0),
+                child: Divider(
+                  color: Colors.grey.shade400,
+                  thickness: 2,
+                  indent: 0,
+                  endIndent: 0,
+                ),
+              ),
+              SizedBox(height: 10,),
+              Padding(
+                padding: const EdgeInsets.only(left: 8.0,right: 8.0),
+                child: Row(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text("Delivery Service",style: TextStyle(
+                      color: Colors.grey.shade800,
+                      fontFamily: 'description',
+                      fontSize: 12,
+                    ),),
+                    Text("\$ 0.00",style: TextStyle(
+                      color: Colors.grey.shade800,
+                      fontFamily: 'description',
+                      fontSize: 14,
+                    ),)
+                  ],
+                ),
+              ),
+              SizedBox(height: 40,),
+              Padding(
+                padding: const EdgeInsets.only(left: 8.0,right: 8.0),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text("Total Price",style: TextStyle(
+                          color: Colors.grey.shade800,
+                          fontFamily: 'description',
+                          fontSize: 10,
+                        ),),
+                        SizedBox(height: 4,),
+                        Text("\$ 35.00",style: TextStyle(
+                          color: Colors.grey.shade800,
+                          fontFamily: 'description',
+                          fontSize: 24,
+                        ),),
+                      ],
+                    ),
+                    Container(
+                      width: 170,
+                      height: 55,
+                      child: ElevatedButton(onPressed: (){}, child: Text("Checkout",style: TextStyle(
+                        color: Colors.white,
+                        fontFamily: 'pageHead',
+                        fontSize: 14,
+                      ),),
+                      style: ElevatedButton.styleFrom(foregroundColor: Colors.red.shade600,backgroundColor: Colors.red.shade600,
+
+                      )),
+                    )
+                  ],
+                ),
+              )
+            ],
+          ),
         ),
       ),
+
+
     );
   }
 }

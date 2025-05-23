@@ -2,6 +2,7 @@
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:snackzilla/Cart/myOrder.dart';
 import 'package:snackzilla/Profile/profilePage.dart';
 import 'package:snackzilla/Settings/settingPage.dart';
 import 'package:snackzilla/menu/menuPage.dart';
@@ -123,11 +124,6 @@ class _homePageState extends State<homePage> {
           color: Colors.white,
           child: Column(
             children: [
-              Container(height: 30,
-                decoration: BoxDecoration(
-                    gradient: LinearGradient(colors: [Colors.red.shade400,Colors.red.shade400,])
-                ),
-              ),
               Container(
                 decoration: BoxDecoration(
                     gradient: LinearGradient(colors: [Colors.red.shade400,Colors.white,],
@@ -136,7 +132,7 @@ class _homePageState extends State<homePage> {
                     )
                 ),
                 child: Padding(
-                  padding: const EdgeInsets.only(left: 20.0,right: 20.0,top: 10.0,bottom: 10.0),
+                  padding: const EdgeInsets.only(left: 20.0,right: 20.0,top: 40.0,bottom: 10.0),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
@@ -339,7 +335,9 @@ class _homePageState extends State<homePage> {
             IconButton(onPressed: (){
               Navigator.push(context, MaterialPageRoute(builder: (context)=>menuPage()));
             }, icon: Icon(Icons.restaurant_menu), color: Colors.grey),
-            IconButton(onPressed: (){}, icon: Icon(Icons.shopping_cart), color: Colors.grey),
+            IconButton(onPressed: (){
+              Navigator.push(context, MaterialPageRoute(builder: (context)=>myOrder()));
+            }, icon: Icon(Icons.shopping_cart), color: Colors.grey),
             IconButton(onPressed: (){
               Navigator.push(context, MaterialPageRoute(builder: (context)=>profilePage()));
             }, icon: Icon(Icons.person), color: Colors.grey),

@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:snackzilla/Cart/myOrder.dart';
 import 'package:snackzilla/Settings/NotificationSetPage.dart';
 import 'package:snackzilla/Home/homePage.dart';
 import 'package:snackzilla/Profile/profilePage.dart';
@@ -171,7 +172,12 @@ class _settingPageState extends State<settingPage> {
             IconButton(onPressed: (){
               Navigator.push(context, MaterialPageRoute(builder: (context)=>menuPage()));
             }, icon: Icon(Icons.restaurant_menu), color: Colors.grey),
-            IconButton(onPressed: (){}, icon: Icon(Icons.shopping_cart), color: Colors.grey),
+            IconButton(onPressed: (){
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => myOrder()),
+              );
+            }, icon: Icon(Icons.shopping_cart), color: Colors.grey),
             IconButton(onPressed: (){
               Navigator.push(context, MaterialPageRoute(builder: (context)=>profilePage()));
             }, icon: Icon(Icons.person), color: Colors.grey),
