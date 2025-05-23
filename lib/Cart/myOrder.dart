@@ -244,7 +244,7 @@ class _myOrderState extends State<myOrder> {
                                         ),
                                       ),
                                       child: Text(
-                                        "+   1   -",
+                                        "-   1   +",
                                         style: TextStyle(
                                           fontSize: 12,
                                           fontFamily: 'pageHead',

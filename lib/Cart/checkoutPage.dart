@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:snackzilla/Cart/orderSucc.dart';
 import 'package:snackzilla/Home/homePage.dart';
 
 class checkoutPage extends StatefulWidget {
@@ -326,7 +327,9 @@ class _checkoutPageState extends State<checkoutPage> {
                         onPressed: () {
                           Navigator.push(
                             context,
-                            MaterialPageRoute(builder: (context) => homePage()),
+                            MaterialPageRoute(
+                              builder: (context) => orderSucc(),
+                            ),
                           );
                         },
                         child: Text(
