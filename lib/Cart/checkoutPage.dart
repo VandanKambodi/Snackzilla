@@ -242,7 +242,7 @@ class _checkoutPageState extends State<checkoutPage> {
                   child: Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: ListTile(
-                      leading: Icon(FontAwesomeIcons.locationPin),
+                      leading: Icon(FontAwesomeIcons.locationDot),
                       title: Text(
                         "10 ABC Society",
                         style: TextStyle(

@@ -280,7 +280,14 @@ class _homePageState extends State<homePage> {
                             ),
                             SizedBox(height: 1),
                             ElevatedButton(
-                              onPressed: () {},
+                              onPressed: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (context) => menuPage(),
+                                  ),
+                                );
+                              },
                               child: Text(
                                 "Order now",
                                 style: TextStyle(
@@ -343,7 +350,9 @@ class _homePageState extends State<homePage> {
                       ),
                     ),
                     TextButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.push(context, MaterialPageRoute(builder: (context)=>menuPage()));
+                      },
                       child: Text(
                         "View all",
                         style: TextStyle(

@@ -158,7 +158,7 @@ class _menuPageState extends State<menuPage> {
             final item = items[index];
             return Card(
               color: Colors.grey.shade100,
-              margin: EdgeInsets.only(bottom: 0, left: 8, right: 8, top: 20),
+              margin: EdgeInsets.only(bottom: 6, left: 8, right: 8, top: 25),
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(16),
               ),
