@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:snackzilla/Cart/itemPage.dart';
 import 'package:snackzilla/Cart/myOrder.dart';
 import 'package:snackzilla/Profile/profilePage.dart';
 import 'package:snackzilla/Settings/settingPage.dart';
@@ -31,7 +32,7 @@ class _homePageState extends State<homePage> {
       'image': 'assets/Images/p2.png',
     },
     {
-      'name': 'Cheeseburger ',
+      'name': 'Cheeseburger',
       'restaurant': "McDonald's",
       'time': '20 Min',
       'calories': '110 Kcal',
@@ -68,7 +69,6 @@ class _homePageState extends State<homePage> {
       'image': 'assets/Images/s1.png',
     },
   ];
-
 
   @override
   Widget build(BuildContext context) {
@@ -314,7 +314,10 @@ class _homePageState extends State<homePage> {
                     ),
                     TextButton(
                       onPressed: () {
-                        Navigator.push(context, MaterialPageRoute(builder: (context)=>menuPage()));
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => menuPage()),
+                        );
                       },
                       child: Text(
                         "View all",
@@ -557,7 +560,12 @@ class BurgerCard extends StatelessWidget {
                       ),
                     ),
                     IconButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => itemPage()),
+                        );
+                      },
                       icon: Icon(
                         Icons.add_circle,
                         size: 30,

@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:snackzilla/Cart/itemPage.dart';
 import 'package:snackzilla/Cart/myOrder.dart';
 import 'package:snackzilla/Home/homePage.dart';
 import 'package:snackzilla/Profile/profilePage.dart';
@@ -274,7 +275,14 @@ class _menuPageState extends State<menuPage> {
                                   crossAxisAlignment: CrossAxisAlignment.end,
                                   children: [
                                     ElevatedButton(
-                                      onPressed: () {},
+                                      onPressed: () {
+                                        Navigator.push(
+                                          context,
+                                          MaterialPageRoute(
+                                            builder: (context) => itemPage(),
+                                          ),
+                                        );
+                                      },
                                       style: ElevatedButton.styleFrom(
                                         backgroundColor: Colors.black,
                                         minimumSize: Size(48, 24),
