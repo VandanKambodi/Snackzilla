@@ -126,7 +126,7 @@ class _orderSuccState extends State<orderSucc> {
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 Text(
-                  "Total Amount: \$35.00",
+                  "Total Amount: \$70.00",
                   style: TextStyle(
                     color: Colors.black,
                     fontFamily: 'pageHead',

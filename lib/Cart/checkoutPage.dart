@@ -311,7 +311,7 @@ class _checkoutPageState extends State<checkoutPage> {
                         ),
                         SizedBox(height: 4),
                         Text(
-                          "\$ 35.00",
+                          "\$ 70.00",
                           style: TextStyle(
                             color: Colors.grey.shade800,
                             fontFamily: 'pageHead',

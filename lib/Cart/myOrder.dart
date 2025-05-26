@@ -29,39 +29,30 @@ class FoodItem {
 class _myOrderState extends State<myOrder> {
   final List<FoodItem> items = [
     FoodItem(
-      name: "Classic Cheeseburger",
-      description: "Enjoy our juicy beef patty...",
-      imageUrl: "assets/Images/fri.jpg", // Replace with actual image URLs
-      price: 35.00,
+      name: "Cheeseburger with Bacon and Veggies",
+      description: "A juicy grilled beef patty stacked with cheese...",
+      imageUrl: "assets/Images/re1.png", // Replace with actual image URLs
+      price: 25.00,
       rating: 4.5,
-      ratingCount: 320,
-      isVeg: false,
+      ratingCount: 220,
+      isVeg: true,
     ),
     FoodItem(
-      name: "Cheese ramen bowl",
-      description: "Cheese with egg noodles...",
-      imageUrl: "assets/Images/fri.jpg",
-      price: 45.00,
-      rating: 4.7,
+      name: "French Fries",
+      description: "Golden, crispy potato sticks seasoned with salt...",
+      imageUrl: "assets/Images/re5.jpg",
+      price: 20.00,
+      rating: 4.2,
       ratingCount: 160,
       isVeg: true,
     ),
     FoodItem(
-      name: "Cheese ramen bowl",
-      description: "Cheese with egg noodles...",
-      imageUrl: "assets/Images/fri.jpg",
-      price: 45.00,
-      rating: 4.7,
-      ratingCount: 160,
-      isVeg: true,
-    ),
-    FoodItem(
-      name: "Cheese ramen bowl",
-      description: "Cheese with egg noodles...",
-      imageUrl: "assets/Images/fri.jpg",
-      price: 45.00,
-      rating: 4.7,
-      ratingCount: 160,
+      name: "Veg Hakka Noodles",
+      description: "Stir-fried noodles tossed with colorful...",
+      imageUrl: "assets/Images/re4.png",
+      price: 25.00,
+      rating: 4.4,
+      ratingCount: 70,
       isVeg: true,
     ),
   ];
@@ -337,7 +328,7 @@ class _myOrderState extends State<myOrder> {
                         ),
                         SizedBox(height: 4),
                         Text(
-                          "\$ 35.00",
+                          "\$ 70.00",
                           style: TextStyle(
                             color: Colors.grey.shade800,
                             fontFamily: 'pageHead',
